@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
   },
   organization: {
     type: String,
-    required: [true, 'Please add an organization name'],
+    required: [true, 'Please add an organisation name'],
     trim: true,
     maxlength: [100, 'Organization name cannot be more than 100 characters']
   },

@@ -25,6 +25,7 @@ app.get('/api/health', (req, res) => {
 
 // API route imports
 app.use('/api/auth', require('../server/routes/auth'));
+app.use('/api/mass-audits', require('../server/routes/massAudit'));
 // app.use('/api/users', require('../server/routes/users'));
 // app.use('/api/audits', require('../server/routes/audits'));
 // app.use('/api/documents', require('../server/routes/documents'));

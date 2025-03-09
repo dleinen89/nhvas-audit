@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Dashboard from './pages/Dashboard';
+import MassAuditPage from './modules/mass/pages/MassAuditPage';
 import ProtectedRoute from './components/routing/ProtectedRoute';
 
 // Services
@@ -87,7 +88,8 @@ function App() {
           
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/mass-audits" element={<MassAuditPage />} />
             {/* Add more protected routes here */}
           </Route>
         </Routes>
