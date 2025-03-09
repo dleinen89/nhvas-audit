@@ -88,8 +88,9 @@ function App() {
           
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<Dashboard user={user} />} />
-          <Route path="/mass-audits" element={<MassAuditPage />} />
+            <Route path="/dashboard" element={<Dashboard user={user} />} />
+            <Route path="/mass-audits" element={<MassAuditPage />} />
+            <Route path="/mass-management" element={<MassAuditPage />} />
             {/* Add more protected routes here */}
           </Route>
         </Routes>

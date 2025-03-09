@@ -15,6 +15,12 @@ const getMassAudit = (id) => {
   return axios.get(`${API_URL}/${id}`, { headers: authHeader() });
 };
 
+const updateMassAudit = (id, auditData) => {
+  return axios.put(`${API_URL}/${id}`, auditData, { 
+    headers: authHeader() 
+  });
+};
+
 const updateMassAuditStandard = (id, standard, data) => {
   return axios.put(`${API_URL}/${id}/standards/${standard}`, data, { 
     headers: authHeader() 
@@ -36,6 +42,7 @@ const massAuditService = {
   createMassAudit,
   getMassAudits,
   getMassAudit,
+  updateMassAudit,
   updateMassAuditStandard,
   addEvidence,
   deleteMassAudit
