@@ -1,0 +1,84 @@
+# Cline Rules for NHVAS Audit App
+
+## Project Patterns
+
+### Terminology
+- **NHVAS**: National Heavy Vehicle Accreditation Scheme
+- **Mass Management**: One of three NHVAS modules (others are Fatigue Management and Maintenance Management)
+- **Standards**: The specific requirements within each NHVAS module (e.g., Responsibilities, Vehicle Control)
+- **Self-Audit**: The process of businesses checking their own compliance with NHVAS standards
+- **Evidence**: Documents or records that demonstrate compliance with standards
+
+### File Structure
+- Memory bank files are stored in the `memory-bank/` directory
+- Reference materials are stored in `memory-bank/reference-materials/`
+- Project code will follow a modular structure with separate directories for each NHVAS module
+
+### Naming Conventions
+- Use camelCase for JavaScript variables and functions
+- Use PascalCase for React components
+- Use kebab-case for file names
+- Use UPPER_SNAKE_CASE for constants
+
+## User Preferences
+
+### Project Focus
+- The primary goal is to create a tool that helps businesses with compliance while generating leads
+- The tool should be simple enough for staff with limited technical or regulatory knowledge
+- All 8 standards of the Mass Management module must be included
+- The system should be designed to accommodate future modules (Fatigue and Maintenance)
+
+### Technical Preferences
+- React is the preferred frontend framework
+- Node.js or Python for the backend (Node.js selected for MERN stack)
+- Centralized document storage with cross-referencing capabilities
+- Exportable reports for compliance tracking
+
+## Critical Implementation Paths
+
+### Lead Generation
+- Include "Not Sure" options in checklists to identify consulting opportunities
+- Track compliance gaps for potential follow-up
+- Collect data on common compliance challenges
+- Potential for automated review emails offering assistance
+
+### Document Management
+- Centralized storage of policies and procedures
+- Tagging system to associate documents with specific standards
+- Cross-referencing to use single documents as evidence for multiple standards
+- Version control for document updates
+
+### Modular Design
+- Core platform with shared functionality
+- Separate modules for each NHVAS accreditation type
+- Consistent user experience across all modules
+- Single user account accessing multiple modules
+
+## Known Challenges
+
+### Complexity Management
+- NHVAS standards contain complex regulatory information
+- Need to present information in layers (progressive disclosure)
+- Balance between simplicity and comprehensive compliance coverage
+
+### Document Cross-Referencing
+- Single documents may serve as evidence for multiple standards
+- Need efficient tagging and cross-referencing system
+- Must maintain document integrity while allowing flexible association
+
+### Future Expansion
+- System must be designed to accommodate additional NHVAS modules
+- Need to maintain consistency across modules while addressing unique requirements
+- Potential integration with broader compliance software platform
+
+## Evolution of Project Decisions
+
+### Platform Choice
+- Initially considered both web-based and desktop options
+- Decided on web-based for cross-platform accessibility
+- Will use responsive design to support desktop and tablet use
+
+### Document Storage
+- Considered both centralized and distributed approaches
+- Selected centralized database for better management and cross-referencing
+- May eventually link to broader NHVAS compliance software
